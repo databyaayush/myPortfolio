@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aayush Kumar Jha – Data Analyst</title>
+<meta name="description" content="Portfolio of Aayush Kumar Jha, aspiring data analyst working with SQL, Python, Power BI and Excel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0a2e2a; --deep2:#103f38; --gold:#d6ab4e; --gold2:#b88a2c;
+  --bg:#f3f6f5; --card:#fff; --ink:#10201d; --muted:#5a6a66; --line:#d9e1df;
+  --head:'Plus Jakarta Sans',system-ui,sans-serif; --body:'DM Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.c{max-width:1120px;margin:0 auto;padding:0 28px}
+
+/* nav + hero */
+.top{background:var(--deep);color:#fff}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+nav b{font:800 1.15rem var(--head);letter-spacing:-.01em}
+nav ul{list-style:none;display:flex;gap:28px;padding:0;font-size:.95rem}
+nav a{text-decoration:none;color:#c9d8d4}
+nav a:hover{color:var(--gold)}
+.hero{max-width:760px;padding:88px 0 104px}
+.hero h1{font:800 clamp(2.6rem,5.6vw,4.4rem)/1.04 var(--head);letter-spacing:-.035em}
+.hero h1 span{color:var(--gold)}
+.hero p{margin-top:22px;max-width:30em;color:#c3d3cf;font-size:1.1rem}
+.btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.97rem;transition:background .2s,color .2s}
+.btn.gold{background:var(--gold);color:var(--deep)}
+.btn.gold:hover{background:#e6c070}
+.btn.line{border:1.5px solid #3d6a62;color:#fff}
+.btn.line:hover{border-color:var(--gold);color:var(--gold)}
+.facts{display:flex;gap:40px;margin-top:44px;color:#9db5af;font-size:.92rem}
+.facts b{display:block;color:#fff;font:700 1.05rem var(--head)}
+
+/* sections */
+section{padding:84px 0 0}
+h2{font:800 clamp(1.8rem,3.4vw,2.5rem)/1.1 var(--head);letter-spacing:-.025em;margin-bottom:12px}
+.sub{color:var(--muted);max-width:34em;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.card{grid-column:span 2;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:nth-child(n+4){grid-column:span 3}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(10,46,42,.12)}
+.thumb{background:linear-gradient(160deg,var(--deep),var(--deep2));height:150px;display:flex;align-items:center;justify-content:center}
+.thumb svg{width:70%;height:78%}
+.body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.body h3{font:700 1.2rem/1.25 var(--head);letter-spacing:-.01em}
+.body p{margin:8px 0 14px;color:#33443f;font-size:.98rem;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.tags span{font-size:.8rem;padding:3px 10px;border-radius:999px;background:#e6efec;color:var(--deep2);font-weight:500}
+.body a{font-weight:600;font-size:.95rem;color:var(--gold2);text-decoration:none}
+.body a:hover{text-decoration:underline}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
+.skill{border-top:3px solid var(--gold);padding-top:14px}
+.skill h3{font:700 1.05rem var(--head);margin-bottom:4px}
+.skill p{color:var(--muted);font-size:.95rem}
+
+.tl{border-left:2px solid var(--line);margin-left:6px}
+.tl div{position:relative;padding:0 0 30px 28px}
+.tl div::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--bg)}
+.tl time{font-size:.88rem;color:var(--muted)}
+.tl h3{font:700 1.1rem var(--head)}
+.tl p{color:#33443f;font-size:.98rem;max-width:38em}
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:56px}
+.certgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.cert{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:16px 20px}
+.cert h3{font:700 1rem/1.3 var(--head)}
+.cert p{color:var(--muted);font-size:.9rem;margin-top:2px}
+
+.cta{margin-top:96px;background:var(--deep);color:#fff;padding:72px 0;text-align:center}
+.cta h2{max-width:16em;margin:0 auto 14px}
+.cta p{color:#b6c9c4;margin-bottom:30px}
+.cta .links{margin-top:30px;display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
+.cta .links a{color:#c9d8d4;text-decoration:none;border-bottom:1px solid #3d6a62}
+.cta .links a:hover{color:var(--gold);border-color:var(--gold)}
+footer{background:var(--deep);color:#7f9993;font-size:.85rem;text-align:center;padding:0 0 28px}
+
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero>*{animation:in .7s ease both}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:44px;padding:32px 0 72px}
+    .card,.card:nth-child(n+4){grid-column:span 3}
+  .card:last-child{grid-column:span 6}
+  .two{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:620px){
+  body{font-size:16px}
+  nav{flex-wrap:wrap;gap:10px 20px}
+  nav ul{gap:14px;font-size:.88rem;flex-wrap:wrap}
+  .card,.card:nth-child(n+4),.card:last-child{grid-column:span 6}
+  .facts{gap:24px;flex-wrap:wrap}
+  section{padding-top:64px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero>*{animation:none}.card{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+ <div class="c">
+  <nav>
+    <b>Aayush Kumar Jha</b>
+    <ul><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#contact">Contact</a></li></ul>
+  </nav>
+  <div class="hero">
+    <div>
+      <h1>Data analyst who turns <span>numbers</span> into decisions.</h1>
+      <p>I'm Aayush, a BCA student (graduating January 2027) looking for a data analytics internship. I clean data in Python, query it in SQL and present it in Power BI, Tableau and Excel.</p>
+      <div class="btns">
+        <a class="btn gold" href="#projects">View projects</a>
+        <a class="btn line" href="mailto:aayush.jha.working@gmail.com">Get in touch</a>
+      </div>
+      <div class="facts">
+        <div><b>Delhi NCR</b>Hybrid or remote</div>
+        <div><b>SQL · Python · Power BI</b>Core stack</div>
+        <div><b>5 projects</b>End to end</div>
+      </div>
+    </div>
+  </div>
+ </div>
+</header>
+
+<main class="c">
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="sub">Each one starts with a business question and ends with a dashboard or a clear answer.</p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p class="sub">The tools I use across cleaning, querying, analysis and reporting.</p>
+    <div class="skills">
+      <div class="skill"><h3>SQL</h3><p>Joins, aggregations, CTEs, window functions</p></div>
+      <div class="skill"><h3>Python</h3><p>Pandas, NumPy, Jupyter</p></div>
+      <div class="skill"><h3>Dashboards</h3><p>Power BI with DAX, Tableau, Looker Studio</p></div>
+      <div class="skill"><h3>Excel</h3><p>Pivot tables, XLOOKUP, VLOOKUP, Google Sheets</p></div>
+      <div class="skill"><h3>Workflow</h3><p>Git and GitHub</p></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="two">
+      <div>
+        <h2>Experience</h2>
+        <p class="sub">Job simulations completed on Forage.</p>
+        <div class="tl">
+          <div><time>July 2026</time><h3>Deloitte Australia, Data Analytics</h3><p>Built a Tableau dashboard and used Excel to classify data and draw business conclusions.</p></div>
+          <div><time>July 2026</time><h3>Tata, Data Visualisation</h3><p>Prepared questions for a client leadership meeting and built visuals to support executive decisions.</p></div>
+        </div>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <p class="sub">Bachelor of Computer Applications, IGNOU, New Delhi. Expected January 2027.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <p class="sub">Courses and simulations I have completed.</p>
+    <div class="certgrid">
+      <div class="cert"><h3>Data Analytics Essentials</h3><p>Cisco</p></div>
+      <div class="cert"><h3>Python Fundamentals</h3><p>Coddy</p></div>
+      <div class="cert"><h3>SQLite Fundamentals</h3><p>Coddy</p></div>
+      <div class="cert"><h3>Excel Skill Certification</h3><p>OneRoadmap</p></div>
+      <div class="cert"><h3>Presentation Skills</h3><p>TCS iON, Sep to Oct 2026</p></div>
+      <div class="cert"><h3>Embedded System with AI</h3><p>Certificate of completion</p></div>
+      <div class="cert"><h3>Data Analytics Job Simulation</h3><p>Deloitte Australia on Forage, July 2026</p></div>
+      <div class="cert"><h3>Data Visualisation Job Simulation</h3><p>Tata on Forage, July 2026</p></div>
+    </div>
+  </section>
+</main>
+
+<section class="cta" id="contact">
+  <div class="c">
+    <h2>Have an internship or a dataset that needs a look?</h2>
+    <p>I reply to every email.</p>
+    <a class="btn gold" href="mailto:aayush.jha.working@gmail.com">aayush.jha.working@gmail.com</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/aayushkumarjha05" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/databyaayush" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+<footer><div class="c">© <span id="yr"></span> Aayush Kumar Jha</div></footer>
+
+<script>
+/* Edit this list to add or change projects. "repo" and "demo" are optional. thumb: bars | line | donut | heat */
+const projects = [
+  { title:"Customer Shopping Behavior Analysis", thumb:"bars",
+    text:"Purchasing patterns, seasonal trends and payment preferences in retail data, to support business decisions.",
+    tools:["Jupyter","SQL","Power BI"], repo:"https://github.com/databyaayush" },
+  { title:"Marketing Campaign Analysis", thumb:"donut",
+    text:"Compared campaign performance and customer response to see which efforts were worth the spend.",
+    tools:["Excel","SQL","Power BI"], repo:"https://github.com/databyaayush" },
+  { title:"UPI Payment Analysis", thumb:"line",
+    text:"UPI transaction data analysed to understand payment volumes and behaviour in the finance sector.",
+    tools:["Excel","SQL","Python","Power BI"], repo:"https://github.com/databyaayush" },
+  { title:"Hospital Emergency Room Analytics", thumb:"heat",
+    text:"Dashboard on emergency room visits and patient flow, showing where waiting and load build up.",
+    tools:["SQL","Power BI"], repo:"https://github.com/databyaayush" },
+  { title:"Mandi Price Volatility Tracker", thumb:"line",
+    text:"Tracks how crop prices move across mandis over time and highlights the most volatile markets.",
+    tools:["Python","Power BI"], repo:"https://github.com/databyaayush" }
+];
+const G='#d6ab4e', L='#6fa398';
+const thumbs = {
+  bars:'<svg viewBox="0 0 200 110"><g fill="'+L+'"><rect x="14" y="60" width="22" height="40"/><rect x="48" y="40" width="22" height="60"/><rect x="82" y="70" width="22" height="30"/><rect x="116" y="25" width="22" height="75" fill="'+G+'"/><rect x="150" y="50" width="22" height="50"/></g></svg>',
+  line:'<svg viewBox="0 0 200 110"><path d="M10 90 L45 65 L80 74 L115 35 L150 48 L190 14" fill="none" stroke="'+G+'" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 100 H190" stroke="'+L+'" stroke-width="2"/></svg>',
+  donut:'<svg viewBox="0 0 110 110"><circle cx="55" cy="55" r="36" fill="none" stroke="'+L+'" stroke-width="16"/><circle cx="55" cy="55" r="36" fill="none" stroke="'+G+'" stroke-width="16" stroke-dasharray="95 226" transform="rotate(-90 55 55)"/></svg>',
+  heat:'<svg viewBox="0 0 200 110"><g>'+Array.from({length:28},(_,i)=>{const x=10+(i%7)*26,y=8+Math.floor(i/7)*25,o=[.25,.5,.8,.4,1,.3,.65][(i*3)%7];return '<rect x="'+x+'" y="'+y+'" width="22" height="21" rx="3" fill="'+(o>.9?G:L)+'" opacity="'+o+'"/>'}).join('')+'</g></svg>'
+};
+const grid=document.getElementById('grid');
+projects.forEach(p=>{
+  const el=document.createElement('article');
+  el.className='card';
+  el.innerHTML='<div class="thumb" aria-hidden="true">'+thumbs[p.thumb]+'</div><div class="body"><h3></h3><p></p><div class="tags"></div></div>';
+  el.querySelector('h3').textContent=p.title;
+  el.querySelector('p').textContent=p.text;
+  const tags=el.querySelector('.tags');
+  p.tools.forEach(t=>{const s=document.createElement('span');s.textContent=t;tags.appendChild(s)});
+  const body=el.querySelector('.body');
+  [['View code',p.repo],['Live demo',p.demo]].forEach(([l,u],i)=>{
+    if(!u)return;
+    const a=document.createElement('a');a.href=u;a.textContent=l;a.target='_blank';a.rel='noopener';
+    if(i)a.style.marginTop='6px';
+    body.appendChild(a);
+  });
+  grid.appendChild(el);
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
